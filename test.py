@@ -11,7 +11,7 @@ import cv2
 import os
 
 preprocess = 'blur' #thresh
-
+print('d')
 image = cv2.imread('scan.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
