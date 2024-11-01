@@ -95,7 +95,7 @@ while True:
 
             # compute both the starting and ending coordinates for the text prediction bounding box
             # use rotation matrix:(x′=xcos(θ)−ysin(θ),y′=xsin(θ)+ycos(θ)) to calculate the coordinates after possible spin
-            endXxx = int(offsetX + (cos * xData1[x]) + (sin * xData2[x]))
+            endX = int(offsetX + (cos * xData1[x]) + (sin * xData2[x]))
             endY = int(offsetY - (sin * xData1[x]) + (cos * xData2[x]))
             startX = int(endX - box_w)
             startY = int(endY - box_h)
@@ -136,5 +136,5 @@ while True:
 # release resource
 cap.release()
 cv2.destroyAllWindows()
-#git test
+
 
